@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Weather Dashboard</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+  <!-- This is the container that will hold all of the dynamically created content -->
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <header>
+        <div class="col">
+          <h1>
+            Weather Dashboard
+          </h1>
+        </div>
+      </header>
+    </div>
+    <div class="row">
+      <!-- aside for search panel and prepended search history -->
+      <div class="content col-4">
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" id="mySearch" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" id="searchBtn" type="button">Search</button>
+        </form>
+        <div class="content" id="searchHist">
+
+        </div>
+      </div>
+
+      <!-- main content div -->
+      <div class="content col-8" id="forecast">
+
+        <!-- jumbotron showing city, date, current weather symbol, temp, humidity, wind speed, and uv index -->
+        <!-- response.name, response.weather.icon, response.main.temp (convert to F), resonse.main.humidity, response.wind.speed, uv index  -->
+        <div class="jumbotron">
+          <h2 class="display-5" id="cityName">Pick a City</h2>
+          <p class="lead" id="temperature">Temperature:</p>
+          <p class="lead" id="humidity">Humidity:</p>
+          <p class="lead" id="wind-speed">Wind Speed</p>
+          <p class="lead" id="uv-index">uv-index</p>
+        </div>
+
+        <!-- simple cards showing the 5 day forecast -->
+        <!-- date, weather symbool, temperature, and humidity -->
+      </div>
+    </div>
+    <div class="row justify-content-end">
+      <div id="forecast col-8 flex-row-reverse">
+        <div class="card d-inline-flex">
+          <div class="card-body bg-primary " id="day1">
+          </div>
+        </div>
+        <div class="card d-inline-flex">
+          <div class="card-body bg-primary" id="day2">
+          </div>
+        </div>
+        <div class="card d-inline-flex">
+          <div class="card-body bg-primary" id="day3">
+          </div>
+        </div>
+        <div class="card d-inline-flex">
+          <div class="card-body bg-primary" id="day4">
+          </div>
+        </div>
+        <div class="card d-inline-flex">
+          <div class="card-body bg-primary" id="day5">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script type="text/javascript" src="./script.js"></script>
+</body>
+
+</html>
